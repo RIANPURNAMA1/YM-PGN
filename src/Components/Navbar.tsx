@@ -28,7 +28,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="px-4 py-4 shadow-lg rounded-lg fixed top-0 left-0 right-0 z-50 bg-white  ">
+    <div className="px-4 py-4 shadow-lg rounded-lg fixed top-0 left-0 right-0 z-50 bg-white">
       <nav className="flex justify-between items-center">
         <div>
           <h2 className="sm:text-sm md:text-2xl font-semibold flex items-center">
@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className={`md:flex ${isOpen ? "block" : "hidden"} absolute md:static bg-white md:bg-transparent w-full md:w-auto top-16 left-0`}>
           <ul className="flex flex-col md:flex-row md:space-x-4 items-center p-4 md:p-0">
             {DataLink.map((item) => (
-              <li key={item.name} className="hover:text-yellow-500 transition-all">
+              <li key={item.name} className="hover:text-yellow-500 transition-all mb-2 md:mb-0">
                 <a href={item.path} className="relative group">
                   {item.name}
                   <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-yellow-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>

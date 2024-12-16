@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Headersection from './Header-section';
+import "../assets/css/Medos.css";
 
 const socialMediaLinks = [
   {
@@ -16,7 +17,6 @@ const socialMediaLinks = [
     icon: faTwitter,
     url: 'https://www.twitter.com',
     hover: "hover:bg-blue-300",
-
   },
   {
     name: 'Instagram',
@@ -36,10 +36,18 @@ interface MedsosProps {
   isOpen: boolean;
 }
 
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * Komponen untuk menampilkan media sosial yang diikuti oleh Yomart Pagelaran Cianjur.
+ * 
+ * @param {{ isOpen: boolean }} props - properti yang berisi nilai boolean yang menentukan apakah komponen ini terlihat atau tidak.
+ * @returns {JSX.Element} elemen JSX yang menampilkan media sosial.
+ */
+/******  d0129e51-d457-4aa6-9c0e-f259c8d7e112  *******/
 const Medsos: React.FC<MedsosProps> = ({ isOpen }) => {
   return (
-    <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} style={{paddingTop: "100px"}}>
-      <Headersection className='text-center mt-3'>Follow Media Sosial Kami</Headersection>
+  <div id='medsos' className={` transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} style={{marginTop: '100px'}}>
+      <Headersection className=' text-center mt-3'>Follow Media Sosial Kami</Headersection>
       <div className="flex flex-wrap justify-center space-x-4 space-y-4 p-4 md:flex-nowrap">
         {socialMediaLinks.map((media) => (
           <div key={media.name} className={`bg-white shadow-lg rounded-lg p-4 w-full md:w-48 text-center ${media.hover} ${media.textHover}`}>

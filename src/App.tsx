@@ -11,6 +11,7 @@ import GalleryKegiatan from './Components/Gallery-Kegiatan';
 import OurTeam from './Components/OurTeam';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import Promo from './Components/Promo';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function App() {
     }}>
       <Navbar />
       {/* Tombol hanya muncul di tampilan mobile */}
-      <button onClick={toggle} className="md:hidden m-3 "><FontAwesomeIcon icon={faList}/></button>
+      <button onClick={toggle} className="md:hidden m-3 " style={{paddingTop: '100px'}}><FontAwesomeIcon icon={faList}/></button>
 
       {/* Tampilkan Medsos hanya di tampilan desktop */}
       <div className="hidden md:block">
@@ -40,6 +41,7 @@ export default function App() {
       <HeroSection />
       <About/>
       <Service/>
+      <Promo/>
       <GalleryKegiatan/>
       <OurTeam/>
       <Contact/>

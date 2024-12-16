@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: 'poppins' , sans-serif;
+* {
+  font-family: "poppins", sans-serif;
 }
 
-
-html{
-
-transition: all 0.6s ease-in-out;
-scroll-behavior: smooth;
+html {
+  transition: all 0.6s ease-in-out;
+  scroll-behavior: smooth;
+}
+@media (max-width: 500px) {
+  #medsos {
+    margin-top: 0;
+  }
+  .btn {
+    font-size: 1px;
+  }
 }
