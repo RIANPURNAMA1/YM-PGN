@@ -20,7 +20,7 @@ export default function About() {
 
   return (
     <div className=" container mx-auto px-4 " id="about" style={{paddingTop: "100px"}}>
-      <Headersection className="text-start container  sm:px-10 py-4 mx-3 mt-10">
+      <Headersection className="text-center container  sm:px-10 py-4 mx-3 mt-10">
         <FontAwesomeIcon icon={faMugHot} /> About Me
       </Headersection>
       <div className="text-center py-10 grid grid-cols-1 md:grid-cols-2 gap-4">

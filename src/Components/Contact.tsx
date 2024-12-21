@@ -4,12 +4,12 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact() {
   return (
-    <div className="container mx-auto py-10"  id="contact">
+    <div className="container mx-auto px-2 py-10"  id="contact">
       <h2 className="text-2xl font-bold text-center mb-6">Contact Us</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Formulir Kontak */}
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className=" shadow-md rounded-lg p-6">
           <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
           <form>
             <div className="mb-4">
@@ -52,9 +52,9 @@ export default function Contact() {
         </div>
 
         {/* Peta */}
-        <div className="bg-white shadow-md rounded-lg">
+        <div className=" shadow-md rounded-lg">
           <h3 className="text-xl font-semibold p-4">Our Location</h3>
-          <div className="h-64">
+          <div className="h-64 p-2">
             <iframe
               title="Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509198!2d144.9537353153163!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f3b3%3A0x5045675218ceed30!2sYour%20Location!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"

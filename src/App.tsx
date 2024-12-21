@@ -15,16 +15,24 @@ import Promo from './Components/Promo';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
+  const TogleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  }
+
   return (
-    <div className='bg-gradient-to-r from-gray-200 via-white to-white ' style={{
-      scrollBehavior: 'smooth'
+    <body className='' style={{
+      scrollBehavior: 'smooth',
+      transition: 'all 0.3s ease-in-out',
+      backgroundColor: isDarkMode ? 'black' : '',
+      color: isDarkMode ? 'white' : 'black',
     }}>
-      <Navbar />
+      <Navbar TogleDarkMode={TogleDarkMode} isDarkMode={isDarkMode} />
       {/* Tombol hanya muncul di tampilan mobile */}
       <button onClick={toggle} className="md:hidden m-3 " style={{paddingTop: '100px'}}><FontAwesomeIcon icon={faList}/></button>
 
@@ -46,6 +54,6 @@ export default function App() {
       <OurTeam/>
       <Contact/>
       <Footer/>
-    </div>
+    </body>
   );
 }

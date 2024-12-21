@@ -1,7 +1,14 @@
 import { useState } from "react";
 import images from "../assets/images/logo-ym-removebg-preview.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"; // Import ikon matahari
 
-export default function Navbar() {
+interface NavbarProps {
+  TogleDarkMode: () => void;
+  isDarkMode: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ TogleDarkMode, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const DataLink = [
@@ -28,7 +35,13 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="px-4 py-4 shadow-lg rounded-lg fixed top-0 left-0 right-0 z-50 bg-white">
+    <div
+      className={`px-4 py-4 shadow-lg fixed top-0 left-0 right-0 z-50`}
+      style={{
+        backgroundColor: isDarkMode ? "black" : "white",
+        color: isDarkMode ? "white" : "black",
+      }}
+    >
       <nav className="flex justify-between items-center">
         <div>
           <h2 className="sm:text-sm md:text-2xl font-semibold flex items-center">
@@ -49,7 +62,9 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <div className={`md:flex ${isOpen ? "block" : "hidden"} absolute md:static bg-white md:bg-transparent w-full md:w-auto top-16 left-0`}>
+        <div
+          className={`md:flex ${isOpen ? "block" : "hidden"} absolute md:static text-white md:bg-transparent w-full md:w-auto top-16 left-0`} style={{color : isDarkMode ? "white" : "black", backgroundColor: isDarkMode ? "black" : "white" }}
+        >
           <ul className="flex flex-col md:flex-row md:space-x-4 items-center p-4 md:p-0">
             {DataLink.map((item) => (
               <li key={item.name} className="hover:text-yellow-500 transition-all mb-2 md:mb-0">
@@ -59,7 +74,19 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <button className="border border-slate-300 hover:bg-gray-200 px-4 py-2 text-black rounded-md flex items-center mt-2 md:mt-0">
+
+            <button
+              className="text-2xl rounded-full flex items-center mt-2 md:mt-0"
+              onClick={TogleDarkMode}
+            >
+              {isDarkMode ? (
+                <FontAwesomeIcon icon={faSun} /> // Tampilkan ikon bulan jika dalam mode terang
+              ) : (
+              <FontAwesomeIcon icon={faMoon} /> // Tampilkan ikon matahari jika dalam mode gelap
+              )}
+            </button>
+            <button className="border border-slate-300 hover:bg-gray-200 px-4 py-2  rounded-md flex items-center mt-2 md:mt-0" style={{color : isDarkMode ? "white" : "black"}}>
+
               Follow
             </button>
           </ul>
@@ -67,4 +94,6 @@ export default function Navbar() {
       </nav>
     </div>
   );
-}
+};
+
+export default Navbar;
