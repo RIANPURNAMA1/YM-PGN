@@ -38,14 +38,13 @@ export default function App() {
 
       {/* Tampilkan Medsos hanya di tampilan desktop */}
       <div className="hidden md:block">
-        <Medsos isOpen={true} />
+        <Medsos isOpen={true} isDarkMode={isDarkMode} />
       </div>
 
       {/* Tampilkan Medsos di tampilan mobile jika isOpen true */}
       <div className="md:hidden">
-        {isOpen && <Medsos isOpen={isOpen} />}
+        {isOpen && <Medsos isOpen={isOpen} isDarkMode={isDarkMode} />}
       </div>
-
       <HeroSection />
       <About/>
       <Service/>

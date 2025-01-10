@@ -11,6 +11,7 @@ export default function HeroSection() {
             <h1 className="text-3xl md:text-4xl font-bold">
               Selamat Datang Di Website Yomart Pagelaran
             </h1>
+            <h2 className="italic text-lg text-yellow-500">Belanja Dekat Dan Hemat</h2>
             <p className="mt-4 mb-2 max-w-md mx-auto md:mx-0">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Asperiores, quos. Lorem ipsum dolor sit amet, consectetur

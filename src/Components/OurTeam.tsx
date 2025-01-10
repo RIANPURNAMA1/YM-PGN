@@ -4,29 +4,57 @@ import Headersection from './Header-section';
 const teamMembers = [
   {
     id: 1,
-    name: 'John Doe',
-    position: 'CEO',
+    name: 'Asril Septian',
+    position: 'Kepala Toko',
     image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
     description: 'John is the CEO and founder of the company.',
   },
   {
     id: 2,
-    name: 'Jane Smith',
-    position: 'CTO',
+    name: 'Sindi Sopia',
+    position: 'Ass Kepala Toko',
     image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
     description: 'Jane is the Chief Technology Officer.',
   },
   {
     id: 3,
-    name: 'Alice Johnson',
-    position: 'Designer',
+    name: 'Ilham Maulana',
+    position: 'Staff Toko',
     image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
     description: 'Alice is responsible for the design and user experience.',
   },
   {
     id: 4,
-    name: 'Bob Brown',
-    position: 'Developer',
+    name: 'Soleh Muttaqin',
+    position: 'Kasir',
+    image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
+    description: 'Bob is a full-stack developer.',
+  },
+  {
+    id: 5,
+    name: 'M. Ardiansyah Nugraha',
+    position: 'Store Crew',
+    image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
+    description: 'Bob is a full-stack developer.',
+  },
+  {
+    id: 6,
+    name: 'Rian Purnama',
+    position: 'Store Crew',
+    image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
+    description: 'Bob is a full-stack developer.',
+  },
+  {
+    id: 7,
+    name: 'M Rizwar',
+    position: 'Store Crew',
+    image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
+    description: 'Bob is a full-stack developer.',
+  },
+  {
+    id: 8,
+    name: 'Lutfy',
+    position: 'Store Crew',
     image: 'https://via.placeholder.com/150', // Ganti dengan URL gambar anggota tim
     description: 'Bob is a full-stack developer.',
   },
